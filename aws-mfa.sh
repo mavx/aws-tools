@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Usage 1: 
+# $ ./aws-mfa 424101 # <--- Your MFA token
+# 
+# Usage 2:
+# $ ./aws-mfa -t 424101 -n mfa -p dev
+# * -t: Your MFA token
+# * -n: The AWS profile name to create for this MFA session
+# * -p: The AWS profile that you wish to authenticate as
+
 # Default values
 TOKEN="$1" # Accepts token without requiring -t flag
 NAME="mfa"
