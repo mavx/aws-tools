@@ -41,7 +41,7 @@ echo "AssumeRole profile: $NAME"
 echo "AssumingRole: $ROLE_ARN"
 # echo "ARN: $ARN"
 
-CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name mauyong-cli --profile $AWS_PROFILE)
+CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name gg-cli --profile $AWS_PROFILE)
 exit_if_error
 
 ACCESS_KEY_ID=$(echo $CREDENTIALS | jq --raw-output '.Credentials.AccessKeyId')
